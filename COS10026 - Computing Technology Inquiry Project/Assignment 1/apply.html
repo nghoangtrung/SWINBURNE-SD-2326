@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application form</title>
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/responsive.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/97645aa929.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body  id="Apply-Background">
+    <nav>
+        <input type="checkbox" id="Check">
+        <label for="Check" id="Nav-Check"><i class="fa-solid fa-bars"></i></label>    
+        <label class="Nav-Logo">MinTecK</label>
+        <ul class="Nav">
+            <li id="Nav-List-Home" > 
+                <a href="index.html" id="Nav-Home"><span>Home</span></a>
+            </li>
+            <li id="Nav-List-Career" >
+                <a href="jobs.html" id="Nav-Career"><span>Career</span></a>
+            </li>
+            <li id="Nav-List-Application" class="Nav-List-Active">
+                <a href="apply.html" id="Nav-Application"><span>Application</span></a>
+            </li>
+            <li id="Nav-List-About-Us">
+                <a href="about.html" id="Nav-About-Us"><span>About Us</span></a>
+            </li>
+            <li id="Nav-List-Enhancements" >
+              <a href="enhancements.html" id="Nav-Enhancement"><span>Enhancements</span></a>
+          </li>
+        </ul>
+      </nav>
+
+    <header id="apply-section1">
+        <div id="apply-heading">APPLICATION</div>
+        <div id="apply-heading-description">Welcome to our company! We are looking forward to working with you. Let us know more about you by filling out the form below. Should you have any further questions, contact us at <a target="_blank" href="mailto:104933612@student.swin.edu.au">104933612@student.swin.edu.au</a>.</div>
+        <div id="register"><a href="#form-caption">REGISTER</a></div>
+    </header>
+
+    <main>
+        <section id="apply-section2">
+            <form id="Apply-Form" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+                <fieldset>
+                    <legend id="form-caption">Application form</legend>
+                    <section class="form_element" id="form_section1">
+                        <div>
+                            <p>
+                                <label for="job_ref">Job reference number</label>
+                                <input class="Form-Input" type="text" id="job_ref" name="Job reference number" placeholder="5 alphanumeric characters" pattern="[a-zA-Z0-9]{5}">
+                            </p>
+                            <p>
+                                <label for="first_name">First name</label>
+                                <input class="Form-Input" type="text" id="first_name" name="First name" pattern="[a-zA-Z]{0,20}" placeholder="Max 20 alpha characters">
+                            </p>
+                            <p>
+                                <label for="last_name">Last name</label>
+                                <input class="Form-Input" type="text" id="last_name" name="Last name" pattern="[a-zA-Z]{0,20}" placeholder="Max 20 alpha characters">
+                            </p>
+                            <p>
+                                <label for="dob">Date of birth</label>
+                                <input class="Form-Input" type="text" id="dob" name="Date of birth" pattern="(0?[1-9]|[12][0-9]|3[01])/(0?[1-9]|1[0-2])/\d{4}" placeholder="dd/mm/yyyy">
+                            </p>
+                        </div>
+
+                        <div>
+                            <p>
+                                <label for="address">Street Address</label>
+                                <input class="Form-Input" type="text" name="Street Address" id="address" maxlength="40" placeholder="Max 40 characters">
+                            </p>
+                            <p>
+                                <label for="suburb">Suburb / town</label>
+                                <input class="Form-Input" type="text" name="Suburb/town" id="suburb" maxlength="40" placeholder="Max 40 characters">
+                            </p>
+                            <p>
+                                <label for="state">State</label>
+                                <select name="State" id="state">
+                                    <option value="">Please select a state</option>
+                                    <option value="VIC">VIC</option>
+                                    <option value="NSW">NSW</option>
+                                    <option value="QLD">QLD</option>
+                                    <option value="NT">NT</option>
+                                    <option value="WA">WA</option>
+                                    <option value="SA">SA</option>
+                                    <option value="TAS">TAS</option>
+                                    <option value="ACT">ACT</option>
+                                </select>
+                            </p>
+                            <p>
+                                <label for="postcode">Postcode</label>
+                                <input class="Form-Input" type="text" name="Postcode" id="postcode" pattern="\d{4}" placeholder="4 digits">
+                            </p>
+                            <p>
+                                <label for="email">Email address</label>
+                                <input class="Form-Input" type="email" name="Email address" id="email" placeholder="e.g. example@gmail.com">
+                            </p>
+                            <p>
+                                <label for="phone">Phone number</label>
+                                <input class="Form-Input" type="tel" name="Phone number" id="phone" pattern="[0-9 ]{8,12}" placeholder="8 - 12 digits">
+                            </p>
+                        </div>
+                    </section>
+                        
+                    <section class="form_element" id="form_section2">
+                        <fieldset id="form-gender">
+                            <legend>Gender</legend>
+                            <p>
+                                <input class="Form-Input" type="radio" name="Gender" id="male" value="Male">
+                                <label for="male">Male</label>
+                            </p>
+                            <p>
+                                <input class="Form-Input" type="radio" name="Gender" id="female" value="Female">
+                                <label for="female">Female</label>
+                            </p>
+                            <p>
+                                <input class="Form-Input" class="Form-Input" type="radio" name="Gender" id="notsay" value="Prefer not to say">
+                                <label for="notsay">Prefer not to say</label>
+                            </p>
+                            <p>
+                                <input class="Form-Input" type="radio" name="Gender" id="another_gender">         
+                                <label for="another_gender">Another gender:</label>
+                                <input class="Form-Input" id="other-gender-text" type="text" name="Gender">
+                            </p>
+                        </fieldset>
+                        
+                        <fieldset id="form-skills-list">
+                            <legend>Skills list</legend>
+                            <p>
+                                <input class="Form-Input" class="Form-Input" type="checkbox" checked id="skill1" name="Skills[]" value="Skill 1"> 
+                                <label for="skill1">Skill 1</label>
+                            </p>
+                            <p>
+                                <input class="Form-Input" type="checkbox" id="skill2" name="Skills[]" value="Skill 2">
+                                <label for="skill2">Skill 2</label>
+                            </p>
+                            <p>
+                                <input class="Form-Input" type="checkbox" id="skill3" name="Skills[]" value="Skill 3">
+                                <label for="skill3">Skill 3</label>
+                            </p>
+                            <p>
+                                <input class="Form-Input" type="checkbox" id="skill4" name="Skills[]" value="Skill 4">
+                                <label for="skill4">Skill 4</label>
+                            </p>
+                            <p>
+                                <input class="Form-Input" type="checkbox" id="skill5" name="Skills[]" value="Skill 5">
+                                <label for="skill5">Skill 5</label>
+                            </p>
+            
+                            <p>
+                                <input type="checkbox" id="other_skills">
+                                <label for="other_skills">Other skills</label>
+                                <br>
+                                <textarea name="Skills[]" cols="30" rows="10" placeholder="List your other skills here"></textarea>
+                            </p>
+                        </fieldset>
+                    </section>
+                    
+                    <section id="form_buttons">
+                        <input type="submit" value="Apply">
+                        <input type="reset" value="Reset form">
+                    </section>
+                    
+                </fieldset>
+            </form>
+        </section> 
+    </main>
+
+    <footer>
+        <div class="row">
+            <div class="col" id="Footer-Info">
+                <label class="Footer-Logo">MinTecK</label>
+            </div>
+            <div class="col" id="Footer-Contact">
+                <h3>Contact</h3>
+                <p>A35 Đ. Bạch Đằng, Phường 2, Tân Bình, TP.HCM</p>
+                <p>+84935890195</p>
+            </div>
+            <div class="col" id="Footer-Menu">
+                <h3>Menu</h3>
+                <ul class="Footer-Menu-List">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Career</a></li>
+                    <li><a href="apply.html">Application</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="enhancements.html">Enhancement</a></li>
+                </ul>
+            </div>
+            <div class="col" id="Footer-Form">
+                <h3>Feedback</h3>
+                <form method="post" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" name="Mail" placeholder="Enter your email address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="Footer-Form-Social">
+                    <a href="https://www.facebook.com/profile.php?id=100010594336098"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/channel/UCMtocow1FhB8wIwhf-7Wx6w"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/ngtrungg"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.tiktok.com/@ngtrunggg?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr id="Footer-hr">
+        <p id="Footer-Copyright">MinTecK © 2024</p>
+    </footer>
+</body>
+</html>
