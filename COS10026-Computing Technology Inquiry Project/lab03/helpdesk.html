@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Inquiry Project">
+    <meta name="keywords" content="HTML Forms">
+    <meta name="author" content="Nguyễn Hoàng Trung">
+    <title>CWA Help Desk Appointment</title>
+</head>
+<body>
+        <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+            <a href="http://www.swin.edu.au"><img src="logo.png" alt="Logo"></a>
+            <h1>CWA Help Desk Appointment</h1>
+            <p>The Help Desk is located in ATC620 Open 10:30 to 19:00 Monday to Friday<br>
+                Check Blackboard for when CWA tutors will be there
+            </p>
+            <fieldset>
+                <legend>Student details</legend>
+                <p><label for="student_ID">Student ID</label><input type="text" id="student_ID" name="student_ID" size="10" pattern="\d{7,10}" required></p>
+                <p>
+                    <label for="given_name">Given Name</label>
+                        <input type="text" id="given_name" name="given_name" pattern="[A-Za-z]{1,15}" required>
+                    <label for="family_name">Given Name</label>
+                        <input type="text" id="family_name" name="family_name" pattern="[A-Za-z]{1,15}" required>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Your unit</legend>
+                <p>
+                    <label for="option1">
+                        <input type="radio" id="option1" name="unit_code" value="10011" required> COS10011
+                    </label>
+                    <label for="option2">
+                        <input type="radio" id="option2" name="unit_code" value="60004"> COS60004
+                    </label>
+                    <label for="option3">
+                        <input type="radio" id="option3" name="unit_code" value="60007"> COS60007
+                    </label>
+                </p>
+                <p>
+                    <label for="tutor_name">Your tutor:</label>
+                        <select name="tutor" id="tutor_name" required>
+                            <option value="">Please Select</option>
+                            <option value="1">Minh Toàn</option>
+                            <option value="2">Thái Sơn</option>
+                            <option value="3">Việt Phát</option>
+                            <option value="4">Gia Khang</option>
+                        </select>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Issue</legend>
+                <p>
+                    <label for="issue1">
+                        <input type="checkbox" id="issue1" name="issue1" value="HTML" checked="checked">HTML
+                    </label>
+                    <label for="issue2">
+                        <input type="checkbox" id="issue2" name="issue2" value="CSS">CSS
+                    </label>
+                    <label for="issue3">
+                        <input type="checkbox" id="issue3" name="issue3" value="Js">JavaScript
+                    </label>
+                    <label for="issue4">
+                        <input type="checkbox" id="issue4" name="issue4" value="PHP">PHP
+                    </label>
+                    <label for="issue5">
+                        <input type="checkbox" id="issue5" name="issue5" value="SQL">MySQL
+                    </label>
+                </p>
+                <p>
+                    <label for="description">Description of Issue</label><br>
+                        <textarea id="description" name="description" cols="40" rows="5" placeholder="Write description of your problem here..."></textarea>   
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Preferred Date/Time</legend>
+                <p>
+                    <label for="date">Date:
+                        <input type="text" id="date" name="date" placeholder="dd/mm/yyyy" pattern="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/\d{4}">
+                    </label>
+                </p>
+                <p>
+                    <label for="time">Time:
+                        <input type="text" id="time" name="time" placeholder="00:00" pattern="([01]?[0-9]|2[0-3]):([0-5][0-9])">
+                    </label>
+                </p>
+            </fieldset>
+
+
+            <input type= "submit" value="Book">
+            <input type= "reset" value="Reset Form">  
+        </form>
+</body>
+</html>
