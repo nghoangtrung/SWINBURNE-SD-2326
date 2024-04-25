@@ -1,0 +1,1463 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito';
+}
+
+input[type='radio'] {
+    display: none;
+}
+
+/*NavBar-------------------------------------*/
+nav {
+    width: 95%;
+    background-color: rgba(255, 255, 255,1);
+    margin: 20px 2.5%;
+    height: 70px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 4px 0px rgb(206, 206, 206), -1px -1px 4px 0px rgb(206, 206, 206);
+    position: fixed;
+    z-index: 2;
+}
+
+.Nav {
+    float: right;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    height: 70px;
+}
+
+.Nav li {
+    display: inline-block;
+    list-style: none;
+    height: 70px;
+    margin: 0 20px ;
+}
+
+nav .Nav-Logo {
+    font-family: 'Kanit';
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 70px;
+    margin-left: 30px;
+}
+
+.Nav li a {
+    text-decoration: none;
+    color:black;
+    font-size: 1.5rem;
+    line-height: 70px;
+}
+
+.Nav li a span {
+    height: 70px;
+    display: inline-block;
+    line-height: 73px;
+    border-bottom: 5px solid transparent;
+    transition: all .5s ease-out;
+}
+
+li#Nav-List-AboutMe.Nav-List-Active span{
+    border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+li#Nav-List-Hometown.Nav-List-Active span{
+    border-bottom: 5px solid rgb(255, 157, 0);
+}
+
+li#Nav-List-Uni.Nav-List-Active span{
+    border-bottom: 5px solid rgb(216, 0, 0);
+}
+
+li#Nav-List-Animations.Nav-List-Active span{
+    border-bottom: 5px  solid rgb(10, 122, 0);
+}
+
+#Nav-List-AboutMe:hover span{
+    border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+#Nav-List-Hometown:hover span{
+    border-bottom: 5px solid rgb(255, 157, 0);
+}
+
+#Nav-List-Uni:hover span{
+    border-bottom: 5px solid rgb(216, 0, 0);
+}
+
+#Nav-List-Animations:hover span {
+    border-bottom: 5px  solid rgb(10, 122, 0);
+}
+
+#Nav-Check {
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 70px;
+    margin-right: 40px;
+    cursor: pointer;
+    display:none;
+}
+
+#Check{
+    display: none;
+}
+/*-------------------------------------------*/
+
+/*AboutMe Page Styling-----------------------*/
+
+#About-Me-Cover {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#About-Me-Cover h2 {
+    font-family: 'Kanit';
+    font-size: 7rem;
+    line-height: 90%;
+    min-width: 280px;
+}
+
+#About-Me-Cover h2 span{
+    position: relative;
+    font-family: 'Kanit';
+}
+
+#About-Me-Cover h2 span::before{
+    content: "TRUNG";
+    color: #000000;
+    animation: words 16s infinite;
+}
+
+#About-Me-Cover h2 span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #ffffff;
+    border-left: 2px solid #000000;
+    right: -8px;
+    animation: cursor .8s infinite, typing 16s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,25%{
+        content: "TRUNG";
+        color: black;
+    }
+    26%,40%{
+        content: "KAI";
+        color:rgb(255, 157, 0);
+        
+    }
+    51%,60%{
+        content: "SWINER";
+        color: rgb(216, 0, 0);
+    }
+    70%,80%{
+        content: "a Developer";
+        color:rgb(10, 122, 0);
+    }
+    81%,100%{
+        content: "...";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+/*About Me -----------------------*/
+#About-Me-Detail {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #000000;
+    border-radius: 100px 100px 0 0;
+    color: white;
+    padding: 40px;
+    z-index: 0;
+}
+
+#About-Me-Detail #About-Me-Detail-Head h2 {
+    position: relative;
+    font-family: 'Kanit';
+    font-size: 7rem;
+    z-index: 1;
+    transform: translateX(-20vw);
+}
+
+#About-Me-Detail-Image {
+    flex-basis: 40%;
+}
+
+#About-Me-Detail img {
+    z-index: 0;
+    height: 60vw;
+    filter: grayscale(100);
+    transition: filter 1s;
+}
+
+#About-Me-Detail img:hover {
+    filter: grayscale(0)
+}
+
+#About-Me-Detail-Content {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    width:100%
+}
+
+#About-Me-Detail-Description {
+    flex-basis: 40%;
+    transform: translateX(6vw) translateY(-25vw);
+    background: rgba(0,0,0,0.5);
+    padding: 3vw;
+    border-radius: 20px;
+}
+#About-Me-Detail-Quote {
+    flex-basis: 50%;
+}
+
+#About-Me-Detail #About-Me-Comment {
+    width: 100%;
+}
+
+#About-Me-Detail #About-Me-Comment h2 {
+    color: rgb(243, 243, 243);
+    font-family: 'Kanit';
+    font-size: 6rem;
+    z-index: 1;
+    text-align: left;
+}
+
+#About-Me-Comment-Details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#About-Me-Comment-Details .Comment {
+    margin: 0 5%;
+    width: 90%;
+    background-image: url("img/Comment-Background.png");
+    background-size: cover;
+    background-position: right;
+    color: rgb(255, 255, 255);
+    margin: 20px 0;
+    font-size: 2rem;
+    padding: 50px;
+    border-radius: 23px;
+    z-index: 0;
+}
+
+#About-Me-Comment-Details .Comment p {
+    width: 80%;
+    margin-left: 5%;
+}
+
+.Comment-Person {
+    margin: 10px 0;
+}
+
+/*Hobbies-----------------------*/
+
+#About-Me-Hobbies {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 100px 100px 0 0;
+    color: black;
+    z-index: 1;
+}
+
+#About-Me-Hobbies #About-Me-Hobbies-Heading {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+}
+
+#About-Me-Hobbies #About-Me-Hobbies-Heading h2 {
+    position: relative;
+    font-family: 'Kanit';
+    font-size: 7rem;
+    z-index: 1;
+    text-align: right;
+}
+
+.About-Me-Hobby {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px 0;
+    padding: 40px;
+}
+
+.About-Me-Hobbies-Head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.About-Me-Hobbies-Head p {
+    font-family: 'Kanit';
+    font-size: 3rem;
+    margin: 0 20px ;
+}
+
+.About-Me-Hobbies-Head h3 {
+    font-family: 'Kanit';
+    font-size: 7rem;
+    z-index: 1;
+}
+
+#About-Me-Hobbies-Books-Head p {
+    color: #3f3f3f;
+}
+
+#About-Me-Hobbies-Books-Head hr {
+    color: #000000;
+    border: 2px solid black;
+    width: 100%;
+}
+
+.About-Me-Hobbies-List {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.About-Me-Hobbies-Book {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 17rem;
+    margin: 0 20px;
+}
+
+
+.About-Me-Hobbies-Image {
+    border-radius: 5px;
+    transition: border-radius .5s;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.About-Me-Hobbies-Image {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+}
+
+.About-Me-Hobbies-Image:hover{
+    transform: rotateY(180deg);
+  }
+
+.About-Me-Hobbies-Card-Front {
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: #000;
+}
+
+.About-Me-Hobbies-Card-Back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: #ffffff;
+    border: 1px solid rgb(117, 117, 117);
+    text-align: center;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.About-Me-Hobbies-Card-Back p{
+    width: 90%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#About-Me-Hobbies-Book-1-Back {  
+    color: white;
+    background: linear-gradient(315deg, #014CFF, #B3B1FF);
+}
+
+#About-Me-Hobbies-Book-2-Back {  
+    color: white;
+    background: linear-gradient(315deg, #014CFF, #020165);
+}
+
+#About-Me-Hobbies-Book-3-Back {  
+    color: white;
+    background: radial-gradient(at left top, #E38080, #B00D20);
+}
+
+.About-Me-Hobbies-Book img {
+    width: 100%;
+    border-radius: 5px;
+    transition: border-radius .5s;
+}
+
+.About-Me-Hobbies-Title {
+    width: 100%;
+}
+
+.About-Me-Hobbies-Title p:first-child {
+    font-family: 'Kanit';
+    font-weight: 600;
+    font-size: 2rem;
+}
+.About-Me-Hobbies-Title p:nth-child(2) {
+    font-family: 'Kanit';
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.About-Me-Hobbies-Book-Genre {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.About-Me-Hobbies-Book-Genre p {
+    font-weight: 600;
+    font-size: 1.3rem;
+    border: 3px solid black;
+    border-radius: 50px;
+    padding: 5px 20px;
+}
+
+.About-Me-Hobbies-Book-Genre p:first-child {
+    margin-left: 0px;
+}
+
+#About-Me-Hobbies-Games {
+    background: black;
+    color: white;
+    border-radius: 70px 0 70px 0;
+}
+
+#About-Me-Hobbies-Games-Head {
+    justify-content: flex-end;
+}
+
+#About-Me-Hobbies-Games-Head hr {
+    border: 2px solid rgb(255, 255, 255);
+    width: 100%;
+}
+
+.About-Me-Hobbies-Game {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 17rem;
+    margin: 0 20px;
+}
+
+.About-Me-Hobbies-Game img {
+    width: 100%;
+    border-radius: 5px;
+    transition: border-radius .5s;
+}
+
+.About-Me-Hobbies-Game-Genre {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.About-Me-Hobbies-Game-Genre p {
+    font-weight: 600;
+    font-size: 1.3rem;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 5px 20px;
+}
+
+/*Strength-----------------------*/
+#About-Me-Strength {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 40px;
+}
+
+#About-Me-Strength-Heading h2 {
+    width: 100%;
+    font-family: 'Kanit';
+    font-size: 7rem;
+}
+
+#About-Me-Strength-Details {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.About-Me-Strength-Details-List {
+    height: fit-content;
+    width: 40%;
+    margin: 20px auto;
+    color: white;
+    box-shadow: none;
+    border-radius: 23px;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.About-Me-Strength-Details-List h3{
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-family: 'Kanit';
+    font-size: 7rem;
+    height: 0;
+    text-shadow: 1px 1px 4px black;
+}
+
+.About-Me-Strength-Details-List h4{
+    font-size: 1.25rem;
+}
+
+.About-Me-Strength-Details-List li {
+    margin: 20px;
+    padding: 10px;
+}
+
+.About-Me-Strength-Details-List li:first-child {
+    margin-top: 0;
+}
+
+.About-Me-Strength-Details-List li:last-child {
+    margin-bottom: 0;
+}
+
+#About-Me-Strength-Details-Sport {
+    background-image: url("img/Sport-Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About-Me-Strength-Details-Coding {
+    background-image: url("img/Coding-Background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.About-Me-Strength-Details-List-Overflow {
+    padding: 20px;
+    transform: translateY(150%);
+    background-color: rgba(0,0,0,0.5);
+    transition: all 1s;
+    list-style: none;
+}
+
+.About-Me-Strength-Details-List:hover .About-Me-Strength-Details-List-Overflow {
+    transform: translateY(0%);
+}
+
+.Details-Bar {
+    height: 20px;
+    display: block;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    transition: all .3s cubic-bezier(.25,.8,.25,.1);
+}
+
+.Details-Bar span {
+    width: 0;
+    height: 20px;
+    float: left;
+    background-color: #ffffff;
+    transition: width 2s;
+}
+
+.About-Me-Strength-Details-List:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.3);
+}
+
+.About-Me-Strength-Details-List:hover .Details-Basketball {
+    width: 80%;
+}
+.About-Me-Strength-Details-List:hover .Details-Football {
+    width: 100%;
+}
+.About-Me-Strength-Details-List:hover .Details-Badminton {
+    width: 50%;
+}
+.About-Me-Strength-Details-List:hover .Details-Volleyball {
+    width: 60%;
+}
+
+.About-Me-Strength-Details-List:hover .Details-Html {
+    width: 70%;
+}
+.About-Me-Strength-Details-List:hover .Details-Css {
+    width: 60%;
+}
+.About-Me-Strength-Details-List:hover .Details-Js {
+    width: 30%;
+}
+.About-Me-Strength-Details-List:hover .Details-Ruby {
+    width: 40%;
+}
+
+/* Achievements------------------*/
+#About-Me-Achievements {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #ffffff;
+    
+    color: rgb(0, 0, 0);
+}
+
+#About-Me-Achievements h2 {
+    padding-left: 40px;
+    width: 100%;
+    font-family: 'Kanit';
+    font-size: 7rem;
+}
+
+.About-Me-Achievements-List-Item {
+    position: sticky;
+    top:0;
+    background: white;
+    border-radius: 70px 70px 0 0;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
+}
+
+.About-Me-Achievements-List-Title {
+    display: flex;
+    align-items: center;
+    
+}
+
+.About-Me-Achievements-List-Title p {
+    font-family: 'Kanit';
+    font-size: 2rem;
+    margin-right: 20px;
+    color: #333;
+}
+
+.About-Me-Achievements-List-Title h3{
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-family: 'Kanit';
+    font-size: 5rem;
+}
+
+.About-Me-Achievements-List-Content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.About-Me-Achievements-List-Description {
+    flex-basis: 60%;
+}
+
+.About-Me-Achievements-List-Description p{
+    font-size: 1.5rem;
+}
+
+.About-Me-Achievements-List-Image {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 40%;
+}
+
+.About-Me-Achievements-List-Image img {
+    width: 100%;
+}
+
+#About-Me-Achievements-List-2, #About-Me-Achievements-List-3 {
+    box-shadow: -1px -11px 16px -10px rgba(0,0,0,0.64);
+}
+/*-------------------------------------------*/
+
+/*UniLife Page Styling-----------------------*/
+#UniLife-Cover {
+    width: 100%;
+    height: 56vw;
+    margin-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.UniLife-Background {
+    position: relative;
+    width: 100%;
+}
+
+#UniLife-Cover h1 {
+    position: relative;
+    top:38%;
+    font-family: 'Kanit';
+    font-weight: 900;
+    font-size: 14.5vw;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    z-index: 1;
+    max-height: 0;
+    /* color: White; */
+}
+
+#UniLife-Article section > h2 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Kanit';
+    font-size: 5rem;
+    margin: 20px 0
+}
+
+.Timetable-Selection {
+    display: none;
+}
+
+.Timetable-Selection label{
+    box-shadow: 1px 1px 5px rgb(153, 153, 153);
+}
+
+/*Timetable-----------------------*/
+.Table {
+    border-radius: 23px;
+}
+
+table {
+    table-layout: fixed;
+    width: 90%;
+    margin: 0 auto;
+    border-spacing: 0;
+}
+
+th {
+    background-color: rgb(232, 0, 0);
+    color: white;
+}
+
+td, th {
+    font-size: 0.75rem;
+    padding: 1%; 
+    border: 1px solid black;
+    text-align: center;   
+    font-weight: bold;
+}
+
+#Table-LeftTop {
+    border-radius: 23px 0 0 0;
+}
+
+#Table-RightTop {
+    border-radius: 0 23px 0 0;
+}
+
+#Table-LeftBottom {
+    border-radius: 0 0 0 23px;
+}
+
+#Table-RightBottom {
+    border-radius: 0 0 23px 0;
+}
+/*------------------------------------------*/
+
+/*Hometown Page Styling--------------------*/
+#Hometown-Cover {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60vw;
+    margin-bottom: 3%;
+    display: flex;
+    overflow: hidden;
+}
+
+.Hometown-Background {
+    position: absolute;
+    width: 100%;
+    top: 0vw;
+}
+
+#Hometown-Background-Light {
+    animation: animation 10s, hold-state infinite;
+}
+
+@keyframes animation {
+    0% { 
+        opacity: 0;
+    }
+    19%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    22%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    34% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+    36% {
+        opacity: 1;
+    }
+    38% {
+        opacity: 0;
+    }
+    39% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    42% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+#Hometown-Background-Title {
+    position: absolute;
+    width: 100%;
+    top: 0vw;
+    animation: opacity-effect 10s,  hold-state infinite;
+}
+
+@keyframes opacity-effect {
+    0% { 
+        opacity: 0;
+    }
+    19%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    22%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    34% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+    }
+    36% {
+        opacity: 1;
+    }
+    38% {
+        opacity: 0;
+    }
+    39% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    42% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% { 
+        opacity: 1;
+    }
+}
+
+@keyframes hold-state {
+    0%, 100% {
+        opacity: 1;
+    }
+}
+
+.Hometown-Article h1 {
+    position: relative;
+    font-size: 7rem;
+    font-family: 'Kanit';
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 1%;
+}
+
+/*Hometown Intro-----------------------*/
+#Introduction {
+    width: 100%;
+    height: fit-content;
+}
+
+#Introduction-Content {
+    margin: auto;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#Introduction-Content p {   
+    color: white;
+    margin: 0 5%;
+    color: black;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    border-left: 3px solid #ffcc00;
+    width: 50%;
+}
+
+/*Cuisine-----------------------*/
+#Cuisine {
+    width: 70%;
+    margin: 30px auto;
+}
+
+#Cuisine-Content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.Cuisine-Content-Brief {
+    flex-basis: 40%;
+}
+
+.Cuisine-Content-Brief h2 {
+    font-family: 'Kanit';
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 1vw;
+}
+
+.Cuisine-Content-Brief p {
+    font-size: 1.5rem;
+    margin: 2%;
+}
+
+.Cuisine-Content-Description{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.Content-Description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 5px 0;
+    height: 20vw;
+    border: 1px solid rgb(169, 169, 169);
+    box-shadow: 2px 2px 3px  rgb(189, 189, 189);
+    border-radius: 23px;
+}
+
+.Content-Description .Content-Description-Image {
+    display: flex;
+    justify-content: center;
+    flex-basis: 40%;
+    filter: grayscale(100);
+    transition: filter 1s ,transform .5s,  flex-basis 1s ;
+}
+
+.Content-Description .Content-Description-Image img{
+    transform: translateX(80%);
+    transition: transform 1s;
+}
+
+.Content-Description .Content-Description-Image img {
+    width: 100%;
+}
+
+.Content-Description-Word {
+    display: flex;
+    align-items: center;
+    max-width: 0;
+    height: 100%;
+    overflow: hidden;
+    flex-basis: 60%;
+    background-image: url('img/Backround.png');
+    background-size:cover;
+    transition: max-width 2s ;
+}
+
+.Content-Description p {
+    margin: auto;
+    width: 90%;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.Content-Description:hover .Content-Description-Image{
+    filter: grayscale(0);
+}
+
+.Content-Description:hover .Content-Description-Image img{
+    transform: translateX(0%);
+}
+
+.Content-Description:hover .Content-Description-Word {
+    max-width: 100%;
+}
+
+/*Location-----------------------*/
+#Location h2 {
+    font-family: 'Kanit';
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color:rgb(255, 179, 0);;
+}
+
+.Location-Content{
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.Location-Content img {
+    width: 45%;
+    height: fit-content;
+    max-height: 800px;
+    position: relative;
+}
+
+#Location-List {
+    margin:  0;
+    width: 45%;
+}
+
+#Location-List li {
+    list-style: none;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px rgb(141, 141, 141), -1px 0 2px rgb(202, 202, 202);
+}
+
+#Location-List li label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    height: 10vw;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    transition:  filter .5s, border-radius .5s;
+}
+
+#Location-1st {
+    background-image: url("img/Ganh-Den.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+#Location-2nd {
+    background-image: url("img/Thap-Nhan.png");
+    background-repeat: no-repeat;
+    background-size: 132%;
+    background-position: center center;
+}
+
+#Location-3rd {
+    background-image: url("img/Ganh-Da-Dia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+#Location-4th {
+    background-image: url("img/Mui-Dien.jpg");
+    background-size: cover;
+    background-position: top center;
+}
+
+#Location-List li label span {
+    font-size: 40px;
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Kanit';
+    font-weight: 900;
+    font-size: 3rem;
+    color: #ffc400;
+}
+
+#Location-List .Location-Description {
+    font-size: 1.23rem ;
+    padding: 0 15px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s, padding .5s;
+}
+#Location-List .Location-Description h3{
+    margin-bottom: 10px;
+}
+
+#Location-List input[type="radio"]:checked + label + .Location-Description {
+    max-height: fit-content;
+    padding: 15px;
+}
+
+#Location-List li input[type="radio"]:checked + label {
+    border-radius: 8px 8px 0 0;
+    filter: grayscale(0);
+}
+
+#Location-List li input[type="radio"]:checked + #Location-1st {
+    background-image: url("img/Ganh-Den.jpg");
+}
+
+#Location-List li input[type="radio"]:checked + #Location-2nd {
+    background-image: url("img/Thap-Nhan.png");
+}
+
+#Location-List li input[type="radio"]:checked + #Location-3rd {
+    background-image: url("img/Ganh-Da-Dia.jpg");
+}
+
+#Location-List li input[type="radio"]:checked + #Location-4th {
+    background-image: url("img/Mui-Dien.jpg");
+}
+/*-------------------------------------------*/
+
+/*Animations Page Styling--------------------*/
+#Animation-Title {
+    height: 40vh;
+}
+
+#Animation-Title h1{
+    position: relative;
+    top: 60px;
+    font-family: 'Kanit';
+    font-size: 9rem;
+    text-align: center;
+}
+
+aside#Animation-Info {
+    width: 50%;
+    margin: auto;
+}
+
+aside#Animation-Info p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+#Animations-About-Me {
+    height: fit-content;
+    width: 100%;
+    padding: 40px;
+}
+
+#Animations-About-Me #Animations-About-Me-Head h2{
+    font-family: 'Kanit';
+    font-size: 5rem;
+}
+/* Animation for Hometown */
+#Animations-Hometown {
+    height: fit-content;
+    width: 100%;
+    padding: 40px;
+}
+
+#Animations-Hometown-Head h2{
+    font-family: 'Kanit';
+    font-size: 5rem;
+}
+
+.Animations-List {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.Animations-List-Item {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin: 0 20px;
+    border-radius: 20px;
+}
+
+.Animations-List-Item-Image {
+    border-radius: 20px;
+    transition: border-radius .5s;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.Animations-List-Item-Image img {
+    width: 100%;
+    border-radius: 10px;
+    transition: border-radius .5s;
+    transform: scale(1);
+    transition: transform 1s;
+}
+
+.Animations-List-Item-Image:hover img {
+    transform: scale(1.05);
+}
+
+.Animations-List-Item-Name {
+    width: 100%;
+}
+
+.Animations-List-Item-Name h3 {
+    font-family: 'Kanit';
+    font-size: 3rem;
+    margin-top: 10px;
+}
+
+.Animations-List-Item-Button {
+    width: 100%;
+}
+
+.Animations-List-Item-Button a{
+    text-decoration: none;
+    font-size: 2rem;
+    background: white;
+    border: 2px solid black;
+    padding: 0.2vw 1vw;
+    border-radius: 50px;
+    color: black;
+    transition: all .5s;
+}
+
+.Animations-List-Item-Button:hover a{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+/*------------------------------------------*/
+
+/*Footer Styling----------------------------*/
+footer {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin-top: 20px;
+    padding: 80px 0px 30px;
+    bottom: 0;
+    line-height: 40px;
+    font-size: 1.2rem;
+    border-radius: 70px 0 0 0;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.col:nth-child(2), .col:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.Footer-Logo{
+    font-family: 'Kanit';
+    font-size: 4rem;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 30px;
+}
+
+.Footer-Menu-List li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.Footer-Menu-List li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    margin-bottom: 50px;
+}
+
+form .fa-regular.fa-envelope {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+form input{
+    width: 100%;
+    background: transparent;
+    color: rgb(255, 255, 255);
+    border:0;
+    outline:none
+}
+
+form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .fa-solid.fa-arrow-right {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+.Footer-Form-Social .fa-brands {
+    width: 40px;
+    height:40px;
+    text-align: center;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    margin-right: 15px;
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.Footer-Form-Social .fa-brands:hover {
+    transform: scale(1.2);
+}
+
+.Footer-Form-Social .fa-facebook-f:hover{
+    color: rgb(1, 101, 225);
+}
+
+.Footer-Form-Social .fa-youtube:hover{
+    color: rgb(255, 0, 0);
+}
+
+.Footer-Form-Social .fa-github:hover{
+    color: rgb(255, 255, 255);
+}
+
+.Footer-Form-Social .fa-tiktok:hover{
+    color: rgb(255, 255, 255);
+}
+
+#Footer-hr {
+    width: 90%;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    margin: 20px auto;
+}
+
+#Footer-Copyright {
+    width: 90%;
+    margin: auto;
+}
+
+
+/*------------------------------------------*/

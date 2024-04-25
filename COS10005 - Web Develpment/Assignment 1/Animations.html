@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nguyễn Hoàng Trung">
+        <meta name="description" content="Summary of animations that included it all webpages">
+        <meta name="keywords" content="Animations, Transition">
+        <link href="style/styles.css" rel="stylesheet">
+        <link href="style/responsive.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/97645aa929.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Animations</title>
+    </head>
+<body>
+    <header class="Header">
+        <nav>
+            <input type="checkbox" id="Check">
+            <label for="Check" id="Nav-Check"><i class="fa-solid fa-bars"></i></label>    
+            <label class="Nav-Logo">NGTRUNG</label>
+            <ul class="Nav">
+                <li id="Nav-List-AboutMe" > 
+                    <a href="AboutMe.html" id="Nav-AboutMe"><span>About Me</span></a>
+                </li>
+                <li id="Nav-List-Hometown" >
+                    <a href="Hometown.html" id="Nav-Hometown"><span>Hometown</span></a>
+                </li>
+                <li id="Nav-List-Uni">
+                    <a href="UniLife.html" id="Nav-Uni"><span>UniLife</span></a>
+                </li>
+                <li id="Nav-List-Animations" class="Nav-List-Active">
+                    <a href="Animations.html" id="Nav-Animations"><span>Animations</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="Animation-Title">
+            <h1>ANIMATION</h1>
+        </div>
+        <aside id="Animation-Info">
+            <p>I believe transition is a more basic definition of animation. Therefore, I include both transition and animation with keyframe in here.</p>  
+        </aside>
+        <article class="Animations-Article">
+            <section id="Animations-About-Me">
+                <div id="Animations-About-Me-Head"><h2>About Me</h2></div>
+                <div class="Animations-List">
+                    <div id="Animations-List-1" class="Animations-List-Item">
+                        <div class="Animations-List-Item-Image">
+                            <img src="images/Animation/Animation-3.png" alt="Animation 1 Image">
+                        </div>
+                        <div class="Animations-List-Item-Name">
+                            <h3>Typing Effect</h3>
+                        </div>
+                        <div class="Animations-List-Item-Button">
+                            <a href="AboutMe.html#About-Me-Cover">Click Here</a>
+                        </div>
+                    </div>
+                    <div id="Animations-List-2" class="Animations-List-Item">
+                        <div class="Animations-List-Item-Image">
+                            <img src="images/Animation/Animation-4.png" alt="Animation 1 Image">
+                        </div>
+                        <div class="Animations-List-Item-Name">
+                            <h3>Flipping</h3>
+                         </div>
+                        <div class="Animations-List-Item-Button">
+                            <a href="AboutMe.html#About-Me-Hobbies">Click Here</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="Animations-Hometown">
+                <div id="Animations-Hometown-Head"><h2>Hometown</h2></div>
+                <div class="Animations-List">
+                    <div id="Animations-List-3" class="Animations-List-Item">
+                        <div class="Animations-List-Item-Image">
+                            <img src="images/Animation/Animation-1.png" alt="Animation 1 Image">
+                        </div>
+                        <div class="Animations-List-Item-Name">
+                            <h3>Opacity Effect</h3>
+                        </div>
+                        <div class="Animations-List-Item-Button">
+                            <a href="Hometown.html#Hometown-Cover">Click Here</a>
+                        </div>
+                    </div>
+                    <div id="Animations-List-4" class="Animations-List-Item">
+                        <div class="Animations-List-Item-Image">
+                            <img src="images/Animation/Animation-2.png" alt="Animation 1 Image">
+                        </div>
+                        <div class="Animations-List-Item-Name">
+                            <h3>Sliding</h3>
+                         </div>
+                        <div class="Animations-List-Item-Button">
+                            <a href="Hometown.html#Cuisine">Click Here</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col" id="Footer-Info">
+                <label class="Footer-Logo">NGTRUNG</label>
+            </div>
+            <div class="col" id="Footer-Contact">
+                <h3>Contact</h3>
+                <p>Location</p>
+                <p>+84935890195</p>
+            </div>
+            <div class="col" id="Footer-Menu">
+                <h3>Menu</h3>
+                <ul class="Footer-Menu-List">
+                    <li><a href="AboutMe.html">About Me</a></li>
+                    <li><a href="Hometown.html">Hometown</a></li>
+                    <li><a href="UniLife.html">UniLife</a></li>
+                    <li><a href="Animations.html">Animations</a></li>
+                </ul>
+            </div>
+            <div class="col" id="Footer-Form">
+                <h3>Feedback</h3>
+                <form method="post" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" name="Mail" placeholder="Enter your email address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="Footer-Form-Social">
+                    <a href="https://www.facebook.com/profile.php?id=100010594336098"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/channel/UCMtocow1FhB8wIwhf-7Wx6w"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/ngtrungg"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.tiktok.com/@ngtrunggg?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr id="Footer-hr">
+        <p id="Footer-Copyright">Nguyen Hoang Trung © 2024</p>
+    </footer>
+</body>
+</html>

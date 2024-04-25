@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Nguyễn Hoàng Trung">
+        <meta name="description" content="Desciption about Hoang Trung's univesity life">
+        <meta name="keywords" content="Uni, Univesity, Timetable">
+        <link href="style/styles.css" rel="stylesheet">
+        <link href="style/responsive.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/97645aa929.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Uni Life</title>
+    </head>
+<body>
+    <header class="Header">
+        <nav>
+            <input type="checkbox" id="Check">
+            <label for="Check" id="Nav-Check"><i class="fa-solid fa-bars"></i></label>    
+            <label class="Nav-Logo">NGTRUNG</label>
+            <ul class="Nav">
+                <li id="Nav-List-AboutMe" > 
+                    <a href="AboutMe.html" id="Nav-AboutMe"><span>About Me</span></a>
+                </li>
+                <li id="Nav-List-Hometown" >
+                    <a href="Hometown.html" id="Nav-Hometown"><span>Hometown</span></a>
+                </li>
+                <li id="Nav-List-Uni" class="Nav-List-Active">
+                    <a href="UniLife.html" id="Nav-Uni"><span>UniLife</span></a>
+                </li>
+                <li id="Nav-List-Animations">
+                    <a href="Animations.html" id="Nav-Animations"><span>Animations</span></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article id="UniLife-Article">
+            <div id="UniLife-Cover">
+                <h1>UNI LIFE</h1> 
+                <img src="images/UniLife/UniLife.png" alt="Background" class="UniLife-Background" >
+            </div>
+            <!-- Timetable -->
+            <section class="UniLife-Timetable">
+                <h2>Timetable</h2>
+                <div class="Timetable-Selection">
+                    <label for="Monday">Monday</label>
+                    <label for="Tuesday">Tuesday</label>
+                    <label for="Wednesday">Wednesday</label>
+                    <label for="Thursday">Thursday</label>
+                    <label for="Friday">Friday</label>
+                    <label for="Saturday">Saturday</label>
+                    <label for="Sunday">Sunday</label>
+                </div>
+
+                    <input type="radio" name="date" id="Monday" checked="checked">
+                    <input type="radio" name="date" id="Tuesday">
+                    <input type="radio" name="date" id="Wednesday">
+                    <input type="radio" name="date" id="Thursday">
+                    <input type="radio" name="date" id="Friday">
+                    <input type="radio" name="date" id="Saturday">
+                    <input type="radio" name="date" id="Sunday">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="Hour" id="Table-LeftTop"> Hour / Date</th>
+                                <th class="Monday">Monday</th>
+                                <th class="Tuesday">Tuesday</th>
+                                <th class="Wednesday">Wednesday</th>
+                                <th class="Thursday">Thursday</th>
+                                <th class="Friday">Friday</th>
+                                <th class="Saturday">Saturday</th>
+                                <th class="Sunday" id="Table-RightTop">Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="Hour">7:00 - 8:00</td>
+                            <td class="Monday"></td>
+                            <td class="Tuesday"></td>
+                            <td class="Wednesday" rowspan="5" id="Table-TNE"> TNE10006 -<br> Networks and Switching </td>
+                            <td class="Thursday"></td>
+                            <td class="Friday"></td>
+                            <td class="Saturday"></td>
+                            <td class="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td class="Hour">8:00 - 9:00</td>
+                            <td class="Monday"></td>
+                            <td class="Tuesday"></td>
+                            <td class="Thursday"></td>
+                            <td class="Friday" rowspan="4" id="Table-COS26">COS10026 - Computing Technology Inquiry Project</td>
+                            <td class="Saturday"></td>
+                            <td class="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td class="Hour">9:00 - 10:00</td>
+                            <td class="Monday"></td>
+                            <td class="Tuesday"></td>
+                            <td class="Thursday"></td>
+                            <td class="Saturday"></td>
+                            <td class="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td class="Hour">10:00 - 11:00</td>
+                            <td class="Monday"></td>
+                            <td class="Tuesday"></td>
+                            <td class="Thursday" rowspan="2" id="Table-VOV">VOV101 - Vovinam</td>
+                            <td class="Saturday"></td>
+                            <td class="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td class="Hour">11:00 - 12:00</td>
+                            <td class="Monday"></td>
+                            <td class="Tuesday"></td>
+                            <td class="Saturday"></td>
+                            <td class="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td class="Hour">12:00 - 13:00</td>
+                            <td class="Monday"></td>
+                            <td class="Tuesday"></td>
+                            <td class="Wednesday"></td>
+                            <td class="Thursday"></td>
+                            <td class="Friday"></td>
+                            <td class="Saturday"></td>
+                            <td class="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td class="Hour">13:00 - 14:00</td>
+                            <td class="Monday"></td>
+                            <td class="Tuesday"></td>
+                            <td class="Wednesday"></td>
+                            <td class="Thursday" rowspan="3" id="Table-COS05">COS10005 - Web Development</td>
+                            <td class="Friday"></td>
+                            <td class="Saturday"></td>
+                            <td class="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td class="Hour">14:00 - 15:00</td>
+                            <td class="Monday"></td>
+                            <td class="Tuesday"></td>
+                            <td class="Wednesday"></td>
+                            <td class="Friday"></td>
+                            <td class="Saturday"></td>
+                            <td class="Sunday"></td>
+                        </tr>
+                        <tr>
+                            <td  class="Hour">15:00 - 16:00</td>
+                                <td class="Monday"></td>
+                                <td class="Tuesday"></td>
+                                <td class="Wednesday"></td>
+                                <td class="Friday"></td>
+                                <td class="Saturday"></td>
+                                <td class="Sunday"></td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="Hour" id="Table-LeftBottom">16:00 - 17:00</td>
+                            <td class="Monday"></td>
+                            <td class="Tuesday"></td>
+                            <td class="Wednesday"></td>
+                            <td class="Thursday"></td>
+                            <td class="Friday"></td>
+                            <td class="Saturday"></td>
+                            <td class="Sunday" id="Table-RightBottom"></td>
+                        </tr>
+                        <tbody>
+                    </table>
+            </section>
+<!-- -------------------------------------- -->
+        </article>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col" id="Footer-Info">
+                <label class="Footer-Logo">NGTRUNG</label>
+            </div>
+            <div class="col" id="Footer-Contact">
+                <h3>Contact</h3>
+                <p>Location</p>
+                <p>+84935890195</p>
+            </div>
+            <div class="col" id="Footer-Menu">
+                <h3>Menu</h3>
+                <ul class="Footer-Menu-List">
+                    <li><a href="AboutMe.html">About Me</a></li>
+                    <li><a href="Hometown.html">Hometown</a></li>
+                    <li><a href="UniLife.html">UniLife</a></li>
+                    <li><a href="Animations.html">Animations</a></li>
+                </ul>
+            </div>
+            <div class="col" id="Footer-Form">
+                <h3>Feedback</h3>
+                <form method="post" action="http://mercury.swin.edu.au/it000000/cos10005/surveytest.php">
+                    <i class="fa-regular fa-envelope"></i>
+                    <input type="email" name="Mail" placeholder="Enter your email address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+                </form>
+                <div class="Footer-Form-Social">
+                    <a href="https://www.facebook.com/profile.php?id=100010594336098"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/channel/UCMtocow1FhB8wIwhf-7Wx6w"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://github.com/ngtrungg"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.tiktok.com/@ngtrunggg?is_from_webapp=1&sender_device=pc"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <hr id="Footer-hr">
+        <p id="Footer-Copyright">Nguyen Hoang Trung © 2024</p>
+    </footer>
+</body>
+</html>

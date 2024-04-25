@@ -1,0 +1,62 @@
+header {
+    color: white;
+    background-color: navy;
+}
+
+main {
+    float: left;
+    width: 65%;
+}
+
+aside {
+    float: right;
+    width: 30%;
+    font-size: 8px;
+    font-style: italic;
+    color: green;
+    background-color: lightblue;
+}
+
+footer {
+    clear: both;
+    color: white;
+    background-color: navy;
+}
+
+nav {
+    background-color: darkgrey;
+}
+
+nav ul {
+    float: left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav a {
+    float: left;
+    width: 6em;
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    padding: 0.2em 0.6em 0.2em 0.6em;
+    border-right: 1px solid white;
+}
+
+nav a:hover {
+    background-color: brown;
+}
+
+article {
+    width: auto ;
+    height: auto;
+    box-shadow: 3px 3px 3px 2px #797979;
+    color: black;
+    background-color: lightgrey;
+}
+
+article h2 {
+    text-shadow: #aaa 2px 2px 2px;
+}

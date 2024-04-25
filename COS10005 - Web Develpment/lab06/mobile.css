@@ -1,0 +1,28 @@
+@media screen and (max-width:480px) {
+    body {
+        color:rgb(0, 0, 0);
+        font-size: 200%;
+    }
+    h1 {
+        text-align: center;
+    }
+    h2 {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+    input {
+        width: 100%;
+    }
+    p {
+        margin: 0;
+    }
+    input[type='radio'] {
+        width: 15%;
+    }
+    input.button {
+        width: 40%;
+    }
+    .Button {
+        text-align: center;
+    }
+}
